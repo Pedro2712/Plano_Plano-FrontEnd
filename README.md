@@ -17,4 +17,4 @@ Ainda não tem
 
 
 #### Sprints 1 (26/06 há 03/07)
-- [ ] Ainda a pensar
+- [X] Ainda a pensar
