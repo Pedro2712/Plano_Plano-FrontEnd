@@ -11,3 +11,6 @@ https://github.com/Pedro2712/Plano_plano-Backend
 ```cmd
 Ainda não tem
 ```
+
+### Funcionalidades:
+- [ ] Ainda a pensar
