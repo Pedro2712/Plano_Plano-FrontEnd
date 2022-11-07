@@ -1,0 +1,24 @@
+.like_button {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: -1rem;
+  padding: 2rem;
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 256ms;
+}
+.like_button:hover {
+  background-color: rgba(0, 0, 0, .05);
+  cursor: pointer;
+}
+
+.like_button__animation {
+  margin: -.3rem 0 0 -.1rem;
+  position: absolute;
+  pointer-events: none;
+}

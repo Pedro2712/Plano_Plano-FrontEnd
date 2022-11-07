@@ -1,0 +1,50 @@
+.main__container {
+  flex: 1 0 auto;
+  width: 100%;
+  max-width: 75rem;
+  margin: 0 auto;
+  margin-top: 10rem;
+  margin-bottom: 3.5rem;
+  margin-left: 7.5rem;
+  padding: 1rem 1.5rem;
+  border: 2.5px solid #DDD;
+  border-radius: 2rem;
+
+  box-shadow: 2px 4px 15px 1px rgba(0, 0, 0, 0.2);
+}
+
+.main__init {
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+}
+
+.main__header {
+  padding: 2rem .5rem;
+  border: 1px solid #DDD;
+  border-left: none;
+  border-right: none;
+  user-select: none;
+}
+
+.main__header__title {
+  color: #3f3f46;
+  font-size: 2rem;
+  font-weight: 650;
+  line-height: 2rem;
+}
+
+.main__footer {
+  padding: 2rem 1rem;
+  border: 1px solid #DDD;
+  border-left: none;
+  border-right: none;
+  user-select: none;
+}
+
+.main__footer__text {
+  color: #52525b;
+  font-size: .9rem;
+  font-weight: 600;
+  text-align: center;
+}

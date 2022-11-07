@@ -1,0 +1,61 @@
+.input_password__input_field {
+  width: 100%;
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.input_password__label {
+  width: 100%;
+  padding-bottom: .3rem;
+  color: #444;
+  font-size: .9rem;
+  font-weight: 600;
+}
+
+.input_password__input {
+  flex: 1 1 auto;
+  width: 100%;
+  height: 3.5rem;
+  padding: 0 4.5rem 0 1.5rem;
+  border: 1px solid #BBB;
+  border-radius: .75rem;
+  background-color: #FFF;
+  font-size: 1rem;
+}
+.input_password__input:focus {
+  outline: none;
+  border-color: #0AF;
+  box-shadow: 0 0 0 2px #0AF6;
+}
+
+.input_password__show_pass_button {
+  width: 3.5rem;
+  height: 3.5rem;
+  margin-left: -3.5rem;
+  padding: 1rem 1.5rem;
+  border: none;
+  border-radius: .75rem;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transition: background-color 128ms;
+}
+.input_password__show_pass_button:hover {
+  background-color: rgba(0, 0, 0, .1);
+}
+.input_password__show_pass_button:hover > .input_password__show_pass_button__icon svg * {
+  fill: #0AF;
+  stroke: #0AF;
+}
+
+.input_password__show_pass_button__icon {
+  position: absolute;
+}
+
+.input_password__show_pass_button__icon svg * {
+  fill: #444;
+  stroke: #444;
+}

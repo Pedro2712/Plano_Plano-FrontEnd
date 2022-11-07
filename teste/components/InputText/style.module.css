@@ -1,0 +1,28 @@
+.input_text__input_field {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.input_text__label {
+  width: 100%;
+  padding-bottom: .3rem;
+  color: #444;
+  font-size: .9rem;
+  font-weight: 600;
+}
+
+.input_text__input {
+  width: 100%;
+  flex: 1 1 auto;
+  padding: 1rem 1.5rem;
+  border: 1px solid #BBB;
+  border-radius: .75rem;
+  background-color: #FFF;
+  font-size: 1rem;
+}
+.input_text__input:focus {
+  outline: none;
+  border-color: #0AF;
+  box-shadow: 0 0 0 2px #0AF6;
+}
