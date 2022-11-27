@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 import Link from 'next/link';
-import axios from "axios";
+// import axios from "axios";
 
 import style from './style.module.css';
 import HelloIcon from '../../components/HelloIcon';
@@ -19,53 +19,53 @@ export default function cadastra() {
   const [pass, setPass] = useState('')
   const [passConfirm, setPassConfirm] = useState('')
 
-  const submit = (event) => {
+  async function submit() {
     // router.push('/')
     // console.log("entrou")
-    axios
-      .post("http://localhost:8000/cadastra/", { "username": user,
-        "email": email,
-        "password": pass,
-        "first_name": firstName,
-        "last_name": lastName})
-      .then((token)=>{
-        console.log(token.token);
-      })
-    // const response = await fetch('http://localhost:8000/cadastra/', {
-    //   method: 'POST',
-    //   headers: {
-    //     'Content-Type': 'application/json',
-    //     'Accept': 'application/json',
-    //   },
-    //   body: JSON.stringify({
-    //     username: user,
-    //     email: email,
-    //     password: pass,
-    //     first_name: firstName,
-    //     last_name: lastName
+    // axios
+    //   .post("http://localhost:8000/cadastra/", { "username": user,
+    //     "email": email,
+    //     "password": pass,
+    //     "first_name": firstName,
+    //     "last_name": lastName})
+    //   .then((token)=>{
+    //     console.log(token.token);
     //   })
-    // })
-    // const { token } = await response.json()
-    //   if (token === '') {
-    //     const divMessage = document.querySelector('.alert')
-    //     let msg = 'Preencha todos os campos'
+    const response = await fetch('http://localhost:8000/cadastra/', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+      },
+      body: JSON.stringify({
+        username: user,
+        email: email,
+        password: pass,
+        first_name: firstName,
+        last_name: lastName
+      })
+    })
+    const { token } = await response.json()
+      if (token === '') {
+        const divMessage = document.querySelector('.alert')
+        let msg = 'Preencha todos os campos'
 
-    //     if (!email.endsWith('@al.insper.edu.br'))
-    //       msg = 'Apenas e-mail insper'
+        if (!email.endsWith('@al.insper.edu.br'))
+          msg = 'Apenas e-mail insper'
 
-    //     const message = document.createElement('div')
+        const message = document.createElement('div')
 
-    //     message.classList.add(style.message)
-    //     message.innerText = msg
+        message.classList.add(style.message)
+        message.innerText = msg
 
-    //     divMessage.appendChild(message)
+        divMessage.appendChild(message)
 
-    //     setTimeout(() => message.style.display = 'none', 3000)
-    //   } else {
-    //     localStorage.setItem('token', token)
-    //     localStorage.setItem('user', user)
-    //     router.push('/')
-    //   }
+        setTimeout(() => message.style.display = 'none', 3000)
+      } else {
+        localStorage.setItem('token', token)
+        localStorage.setItem('user', user)
+        router.push('/')
+      }
   }
 
   return (
@@ -103,7 +103,7 @@ export default function cadastra() {
 
             <InputPassword label="Confirmar senha" value={passConfirm} onInput={({target}) => setPassConfirm(target.value)} />
           </div>
-
+          
           <div className={style.login_form__submit_row}>
             <Link href="/signin">
               <button className={style.login_form__button}>Entrar</button>

@@ -46,21 +46,10 @@
 }
 
 .header__logo {
-  width: 4rem;
+  width: 10rem;
   height: 5rem;
-  border-left: none;
-  background-color: transparent;
-  text-align: center;
-  font-size: 2.25rem;
-  line-height: 5rem;
-  text-shadow: 0 1.5px 0 #71717a,
-               1.5px 0 0 #71717a,
-              0 -1.5px 0 #71717a,
-              -1.5px 0 0 #71717a,
-              -1px 1px 0 #71717a,
-               1px 1px 0 #71717a,
-              1px -1px 0 #71717a,
-             -1px -1px 0 #71717a;
+  margin-top: 2rem;
+  margin-left: 1.5rem;
 }
 
 .header__navbar {

@@ -12,8 +12,8 @@ import InputPassword from '../../components/InputPassword'
 
 export default function Home() {
   const router = useRouter()
-  const [user, setUser] = useState('pedro')
-  const [pass, setPass] = useState('123456789')
+  const [user, setUser] = useState('isabella.andrade')
+  const [pass, setPass] = useState('plano10')
 
     async function submit() {      
       const response = await fetch('http://localhost:8000/api/token/', {

@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
+import Image from 'next/image'
 import Link from 'next/link'
 
 import styles from './style.module.css'
+import logo from './logo.png'
 
 
 export default function AppBar(props) {
@@ -17,9 +19,9 @@ export default function AppBar(props) {
     <header>
         <div className={styles.header__up}>
           <div className={styles.header__logo}>
-            📜
+            <Image src={logo} alt="Logo"/>
           </div>
-          <h1>Teste 3deo j3edmp3kd qdm pqd</h1>
+          <h1>Calculo da eficiência e coeficiente de aproveitamento</h1>
           <strong className={styles.header__up__username}>
             @{name}
           </strong>
