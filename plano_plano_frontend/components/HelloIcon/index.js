@@ -2,6 +2,7 @@ import animationData from './lottie-hello.json'
 import Lottie from 'react-lottie'
 
 
+
 export default function HelloIcon(props) {
   return (
     <Lottie

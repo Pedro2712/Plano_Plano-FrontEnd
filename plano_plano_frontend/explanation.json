@@ -1,0 +1,19 @@
+{
+    "Gestor": "Selecione para quem foi cadastrado o terreno",
+    "Codigo": "Código de cadastro do terreno",
+    "Nome_do_Terreno": "Nome em que foi cadastrado o terreno, utilizando distrito e endereço. Ex “Brooklin - Rua Samuel Morse”",
+    "Metragem": "Metragem que o terreno possui",
+    "Zoneamento": "Zoneamento que o terreno possui",
+    "Publico": "Definição se será um terreno voltando para o Interesse Social (HIS), moradia popular (HMP) ou sem limitação de renda (R2V)",
+    "Operacao_Urbana": "Selecione se o terreno está em alguma operação urbana",
+    "Garagem": "Selecione se o empreendimento possuirá garagem ou não",
+    "Numero_de_vagas": "Insira quantas vagas de carro terá na garagem",
+    "Quantos_Andares_na_Garegem": "Insira quantos andares terá na gararem",
+    "Tipo_da_vaga": "Selecione o tipo de garagem que terá o empreendimento",
+    "Fachada_Ativa": "Se houver fachada ativa no empreendimento (mall), insira a sua metragem, em m2.", 
+    "Quantos_tipos_de_torres": "Insira quantas torres da de tipologias diferentes terá o empreendimento. Dessa forma, se houver uma torre da tipologia “ODS 2” e uma torre da tipologia “ODS 4” o número a ser inserido é 2. Ainda, se houver duas torres da tipologia “ODS 2” e uma “ODS 4”, o número a ser inserido também é 2.",
+    "Tipo_de_Torre": "ODS 2 - torre de apartamentos de 1 dormitório sem varanda; ODS 2 Plus - torre de apartamentos de 1 dormitório com varanda; ODS 4 - torre de apartamentos com 2 dormitórios sem varanda; ODS 4 Plus - torre de apartamentos com 2 dormitórios com varanda; ODS 6 - torre de apartamentos com 3 dormitórios",
+    "Quantos_Andares": "Insira quantos andares possuirá as torres da tipologia selecionada",
+    "Quantos_Apartamentos_por_Andar": "Selecione quantos apartamentos tem por andar dessa tipologia",
+    "Quantidade_de_torres_tipo": "Insira quantas torres tem no empreeendimento com as mesmas tipologias selecionadas"
+}

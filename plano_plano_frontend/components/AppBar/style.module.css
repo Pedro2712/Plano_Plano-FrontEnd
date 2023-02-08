@@ -12,7 +12,7 @@
   user-select: none;
   cursor: default;
   /* position: absolute; */
-  z-index: 900;
+  z-index: 1;
 }
 
 .header__up__username {
@@ -27,14 +27,16 @@
 
 .header_rigth {
   width: 4rem;
-  height: 65%;
-  margin-top: 10.5rem;
+  height: auto;
+  min-height: 30rem;
+  margin-top: 15rem;
+  margin-bottom: 10rem;
   padding: 1rem 0;
   background-color: rgb(235, 233, 233);
   border-radius: 0.5rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   position: fixed;
   inset: 0;
@@ -46,7 +48,7 @@
 }
 
 .header__logo {
-  width: 10rem;
+  width: 12rem;
   height: 5rem;
   margin-top: 2rem;
   margin-left: 1.5rem;

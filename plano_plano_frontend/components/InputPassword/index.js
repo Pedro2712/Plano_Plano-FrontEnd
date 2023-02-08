@@ -5,7 +5,7 @@ import style from './style.module.css'
 import animationData from './lottie-eye.json'
 
 
-export default function InputPassword({label, ...props}) {
+export default function InputPassword({label, inter = 0, ...props}) {
   const [showPass, setShowPass] = useState(false)
 
   function toggleShowPass() {
