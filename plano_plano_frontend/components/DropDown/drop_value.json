@@ -1,238 +1,260 @@
 {
     "Gestor": [
         {
-            "valeu": "Adriano Engel",
+            "value": "Adriano Engel",
             "label": "Adriano Engel"
         },
         {
-            "valeu": "Luís Fernando",
+            "value": "Luís Fernando",
             "label": "Luís Fernando"
         },
         {
-            "valeu": "Marcelo Amirati",
+            "value": "Marcelo Amirati",
             "label": "Marcelo Amirati"
         }
     ],
     "Cidade": [
         {
-            "valeu": "São Paulo",
+            "value": "São Paulo",
             "label": "São Paulo"
         },
         {
-            "valeu": "Guarulhos",
+            "value": "Guarulhos",
             "label": "Guarulhos"
         },
         {
-            "valeu": "Barueri",
+            "value": "Barueri",
             "label": "Barueri"
         },
         {
-            "valeu": "Campinas",
+            "value": "Campinas",
             "label": "Campinas"
         },
         {
-            "valeu": "Diadema",
+            "value": "Diadema",
             "label": "Diadema"
         },
         {
-            "valeu": "São Bernado",
+            "value": "São Bernado",
             "label": "São Bernado"
         }
     ],
     "Zoneamento": [
         {
-            "valeu": "ZEU",
+            "value": "ZEU",
             "label": "ZEU"
         },
         {
-            "valeu": "ZEUP",
+            "value": "ZEUP",
             "label": "ZEUP"
         },
         {
-            "valeu": "ZC",
+            "value": "ZC",
             "label": "ZC"
         },
         {
-            "valeu": "ZM",
+            "value": "ZM",
             "label": "ZM"
         },
         {
-            "valeu": "ZPI-1",
+            "value": "ZPI-1",
             "label": "ZPI-1"
         },
         {
-            "valeu": "ZPI-2",
+            "value": "ZPI-2",
             "label": "ZPI-2"
         },
         {
-            "valeu": "ZEIS-1",
+            "value": "ZEIS-1",
             "label": "ZEIS-1"
         },
         {
-            "valeu": "ZEIS-2",
+            "value": "ZEIS-2",
             "label": "ZEIS-2"
         },
         {
-            "valeu": "ZEIS-3",
+            "value": "ZEIS-3",
             "label": "ZEIS-3"
         },
         {
-            "valeu": "ZEIS-4",
+            "value": "ZEIS-4",
             "label": "ZEIS-4"
         },
         {
-            "valeu": "ZEIS-5",
+            "value": "ZEIS-5",
             "label": "ZEIS-5"
         }
     ],
     "Público": [
         {
-            "valeu": "HIS",
+            "value": "HIS",
             "label": "HIS"
         },
         {
-            "valeu": "HMP",
+            "value": "HMP",
             "label": "HMP"
         },
         {
-            "valeu": "R2V",
+            "value": "R2V",
             "label": "R2V"
         }
     ],
     "Tipo_de_Torre": [
         {
-            "valeu": "Eng 1",
-            "label": "Eng 1"
+            "value": "Eng 3",
+            "label": "Eng 3"
         },
         {
-            "valeu": "Eng 1 Plus",
-            "label": "Eng 1 Plus"
+            "value": "Eng 3 Plus",
+            "label": "Eng 3 Plus"
         },
         {
-            "valeu": "ODS 1",
-            "label": "ODS 1"
+            "value": "Trovatto",
+            "label": "Trovatto"
         },
         {
-            "valeu": "ODS 2",
+            "value": "ODS 2",
             "label": "ODS 2"
         },
         {
-            "valeu": "ODS 2 Plus",
+            "value": "ODS 2 Plus",
             "label": "ODS 2 Plus"
         },
         {
-            "valeu": "ODS 4",
+            "value": "ODS 4",
             "label": "ODS 4"
         },
         {
-            "valeu": "ODS 4 Plus",
+            "value": "ODS 4 Plus",
             "label": "ODS 4 Plus"
         },
         {
-            "valeu": "ODS 6 ",
+            "value": "ODS 6",
             "label": "ODS 6"
+        },
+        {
+            "value": "ODS 6 Plus",
+            "label": "ODS 6 Plus"
+        },
+        {
+            "value": "Não Há",
+            "label": "Não Há"
         }
     ],
-    "Quantos_Apartamentos_por_Andar": [
+    "Apartamentos_por_Andar": [
         {
-            "valeu": 8,
+            "value": 8,
             "label": 8
         },
         {
-            "valeu": 9,
+            "value": 9,
             "label": 9
         },
         {
-            "valeu": 10,
+            "value": 10,
             "label": 10
         },
         {
-            "valeu": 11,
+            "value": 11,
             "label": 11
         },
         {
-            "valeu": 12,
+            "value": 12,
             "label": 12
         }
     ],
     "NR": [
         {
-            "valeu": "Sim",
+            "value": "Sim",
             "label": "Sim"
         },
         {
-            "valeu": "Não",
+            "value": "Não",
             "label": "Não"
         }
     ],
     "Garagem": [
         {
-            "valeu": "Edifício Garagem",
+            "value": "Edifício Garagem",
             "label": "Edifício Garagem"
         },
         {
-            "valeu": "Sobressolo",
+            "value": "Sobressolo",
             "label": "Sobressolo"
         },
         {
-            "valeu": "Subsolo",
+            "value": "Subsolo",
             "label": "Subsolo"
         },
         {
-            "valeu": "Não Há",
+            "value": "Vaga ao Tempo",
+            "label": "Vaga ao Tempo"
+        },
+        {
+            "value": "Não Há",
             "label": "Não Há"
         }
     ],
-    "Operação_Urbana": [
+    "Tipo_fachada_ativa": [
         {
-            "valeu": "Não tem",
-            "label": "Não tem"
+            "value": "Embaixo da torre",
+            "label": "Embaixo da torre"
         },
         {
-            "valeu": "Operação Urbana Água Branca",
-            "label": "Operação Urbana Água Branca"
-        },
-        {
-            "valeu": "Operação Urbana Centro",
-            "label": "Operação Urbana Centro"
-        },
-        {
-            "valeu": "Operação Urbana Faria Lima",
-            "label": "Operação Urbana Faria Lima"
-        },
-        {
-            "valeu": "Operação Urbana Água Espraiada",
-            "label": "Operação Urbana Água Espraiada"
-        },
-        {
-            "valeu": "Operação Urbana Bairros do Tamanduateí",
-            "label": "Operação Urbana Bairros do Tamanduateí"
+            "value": "Fora da torre",
+            "label": "Fora da torre"
         }
     ],
     "Tipo_da_vaga": [
         {
-            "valeu": "Vaga Simples",
+            "value": "Vaga Simples",
             "label": "Vaga Simples"
         },
         {
-            "valeu": "Vaga Dupla",
+            "value": "Vaga Dupla",
             "label": "Vaga Dupla"
         },
         {
-            "valeu": "Vaga Tripla",
+            "value": "Vaga Tripla",
             "label": "Vaga Tripla"
         },
         {
-            "valeu": "Vaga Simples e Dupla",
+            "value": "Vaga Simples e Dupla",
             "label": "Vaga Simples e Dupla"
         },
         {
-            "valeu": "Vaga Dupla e Tripla",
+            "value": "Vaga Dupla e Tripla",
             "label": "Vaga Dupla e Tripla"
         },
         {
-            "valeu": "Não Há",
+            "value": "Não Há",
             "label": "Não Há"
+        }
+    ],
+    "Andares_na_Garegem": [
+        {
+            "value": "0",
+            "label": "0"
+        },
+        {
+            "value": "1",
+            "label": "1"
+        },
+        {
+            "value": "2",
+            "label": "2"
+        },
+        {
+            "value": "3",
+            "label": "3"
+        },
+        {
+            "value": "4",
+            "label": "4"
+        },
+        {
+            "value": "5",
+            "label": "5"
         }
     ]
 }

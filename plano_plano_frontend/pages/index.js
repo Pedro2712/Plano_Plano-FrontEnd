@@ -8,51 +8,46 @@ import Post from '../components/Post'
 import InputText from '../components/InputText'
 import DropDown from '../components/DropDown'
 import { Alert } from '@mui/material';
-import { string } from 'yup'
 
 import explain from '../explanation.json'
 
 
 export default function Home(props) {
   const [alerta, setAlerta] = useState(0)
-
+  
   const router = useRouter()
   const [token, setToken] = useState('')
+  
+  const [gestor, setGestor] = useState('')
+  const [codigo, setCodigo] = useState()
+  const [nomeTerreno, setNomeTerreno] = useState('')
+  const [metragem, setMetragem] = useState('')
+  const [zoneamento, setZoneamento] = useState('')
+  const [publico, setPublico] = useState('')
+  const [tipoFachadaAtiva, settipoFachadaAtiva] = useState('')
+  const [garagem, setGaragem] = useState('')
+  const [numVagas, setNumVagas] = useState('')
+  const [andarGaragem, setAndarGaragem] = useState('')
+  const [tipoVaga, setTipoVaga] = useState('')
+  const [fachadaAtiva, setFachadaAtiva] = useState('')
+  
+  
+  const [numApartamentos, setNumApartamentos] = useState('1')
 
+  const [tipoTorre, setTipoTorre] = useState([])
+  const [quantAndar, setQuantAndar] = useState([])
+  const [apartAndar, setApartAndar] = useState([])
+  const [quantTorre, setQuantTorre] = useState([])
+  
   const [eficiencia, setEficiencia] = useState(null)
   const [aproveitamento, setAproveitamento] = useState(null)
 
-  const [nomeTerreno, setNomeTerreno] = useState('')
-  const [codigo, setCodigo] = useState()
-  const [metragem, setMetragem] = useState('')
-  const [numVagas, setNumVagas] = useState('')
-  const [fachada, setFachada] = useState('')
-  const [nr, setNr] = useState('')
-  const [tipovaga, setTipoVaga] = useState('')
-
-  const [gestor, setGestor] = useState('')
-  const [cidade, setCidade] = useState('')
-  const [zoneamento, setZoneamento] = useState('')
-  const [publico, setPublico] = useState('')
-  const [quantAndarGaragem, setQuantAndarGaragem] = useState('')
-  const [operacaoUrbana, setOperacaoUrbana] = useState('')
-  const [garagem, setGaragem] = useState('')
-
-  const [numApartamentos, setNumApartamentos] = useState('1')
-  const [tipoTorre, setTipoTorre] = useState([])
-  const [quantApartAndar, setQuantApartAndar] = useState([])
-  const [quantTorre, setQuantTorre] = useState([])
-  const [quantAndar, setQuantAndar] = useState([])
-
   const mudaNumApartamentos = (valor) => {
-    if (valor != '') {
-      if (valor > 0 && valor <= 12)
-        setNumApartamentos(valor)
-      else if
-        (valor > 12)
+    if (valor != '' || valor > 1) {
+      if (valor > 12) 
         setNumApartamentos(12)
-      else
-        setNumApartamentos(1)
+      else 
+        setNumApartamentos(valor)
     } else
       setNumApartamentos(1)
   }
@@ -74,16 +69,17 @@ export default function Home(props) {
   }
 
   const setDrop = (valor, label, id) => {
+    console.log(valor)
     if (label == "Gestor") setGestor(valor)
     else if (label == "Cidade") setCidade(valor)
     else if (label == "Zoneamento") setZoneamento(valor)
     else if (label == "Público") setPublico(valor)
-    else if (label == "Operação Urbana") setOperacaoUrbana(valor)
+    else if (label == "Tipo fachada ativa") settipoFachadaAtiva(valor)
     else if (label == "Tipo de Torre") setTipoTorre(incrementaLista(tipoTorre, valor, id))
-    else if (label == "Quantos Apartamentos por Andar") setQuantApartAndar(incrementaLista(quantApartAndar, valor, id))
+    else if (label == "Apartamentos por Andar") setApartAndar(incrementaLista(apartAndar, valor, id))
     else if (label == "Garagem") setGaragem(valor)
-    else if (label == "NR") setNr(valor)
     else if (label == "Tipo da vaga") setTipoVaga(valor)
+    else if (label == "Andares na Garegem") setAndarGaragem(valor)
   }
 
   const desativaAlerta = () => {
@@ -104,17 +100,21 @@ export default function Home(props) {
     }
 
     return 1
-  }
+  }  
 
   const verifica = () => {
-    if (verificaLista(tipoTorre) && verificaLista(quantApartAndar) && verificaLista(quantTorre) && verificaLista(quantAndar)){
-      if (metragem!='' && fachada!='' && garagem!='' && numVagas!='' && tipovaga!='' && quantAndarGaragem!=''){
-        return 1
-      }
+    const listasValidas = verificaLista(tipoTorre) && verificaLista(apartAndar) && verificaLista(quantTorre) && verificaLista(quantAndar);
+    const camposPreenchidos = metragem !== '' && fachadaAtiva !== '' && garagem !== '' && numVagas !== '' && tipoVaga !== '';
+  
+    // Verifica se todas as listas são válidas e se todos os campos estão preenchidos
+    if (listasValidas && camposPreenchidos) {
+      return 1;
+    } else {
+      return 0;
     }
-
-    return 0
+    return 1;
   }
+
 
   const envia = () => {
 
@@ -128,6 +128,7 @@ export default function Home(props) {
   }
 
   async function adiciona() {
+    console.log(tipoFachadaAtiva);
     const response = await fetch('http://localhost:8000/adiciona/terreno/', {
       method: 'POST',
       headers: {
@@ -136,29 +137,27 @@ export default function Home(props) {
         'Authorization': `Token ${token}`
       },
       body: JSON.stringify({
-        nomeTerreno: nomeTerreno,
-        codigo: codigo,
         gestor: gestor,
-        cidade: cidade,
-        zoneamento: zoneamento,
+        codigo: codigo,
+        nomeTerreno: nomeTerreno,
         metragem: parseInt(metragem),
+        zoneamento: zoneamento,
         publico: publico,
-        quantAndarGaragem: parseInt(quantAndarGaragem),
-        operacaoUrbana: operacaoUrbana,
+        tipoFachadaAtiva: tipoFachadaAtiva,
         garagem: garagem,
         numVagas: parseInt(numVagas),
-        fachada: parseInt(fachada),
-        tipovaga: tipovaga,
-        nr: nr,
+        andarGaragem: parseInt(andarGaragem),
+        tipoVaga: tipoVaga,
+        fachadaAtiva: parseInt(fachadaAtiva),
         tipoTorre: tipoTorre,
-        quantApartAndar: quantApartAndar,
-        quantTorre: quantTorre,
         quantAndar: quantAndar,
+        apartAndar: apartAndar,
+        quantTorre: quantTorre,
       })
     })
     const posts = await response.json()
 
-    // console.log(posts)
+    console.log(posts)
     setEficiencia(posts[0])
     setAproveitamento(posts[1])
     // const _response = await fetch('http://localhost:8000/favorita/', {
@@ -216,15 +215,15 @@ export default function Home(props) {
             <InputText inter={explain.Metragem} label="Metragem" tipo={"number"} onInput={({ target }) => setMetragem(target.value)} />
             <DropDown inter={explain.Zoneamento} label="Zoneamento" setDrop={setDrop} />
             <DropDown inter={explain.Publico} label="Público" setDrop={setDrop} />
-            <DropDown inter={explain.Operacao_Urbana} label="Operação Urbana" setDrop={setDrop} />
+            <DropDown inter={explain.tipoFachadaAtiva} label="Tipo fachada ativa" tipo={"text"} setDrop={setDrop} />
           </div>
 
           <div className={style.main__init}>
             <DropDown inter={explain.Garagem} label="Garagem" setDrop={setDrop} />
             <InputText inter={explain.Numero_de_vagas} label="Número de vagas" tipo={"number"} onInput={({ target }) => setNumVagas(target.value)} />
-            <InputText inter={explain.Quantos_Andares_na_Garegem} label="Quantos Andares na Garegem" tipo={"number"} onInput={({ target }) => setQuantAndarGaragem(target.value)} />
+            <DropDown inter={explain.Quantos_Andares_na_Garegem} label="Andares na Garegem" setDrop={setDrop} />
             <DropDown inter={explain.Tipo_da_vaga} label="Tipo da vaga" tipo={"text"} setDrop={setDrop} />
-            <InputText inter={explain.Fachada_Ativa} label="Fachada Ativa" tipo={"text"} onInput={({ target }) => setFachada(target.value)} />
+            <InputText inter={explain.Fachada_Ativa} label="Fachada Ativa (m²)" tipo={"text"} onInput={({ target }) => setFachadaAtiva(target.value)} />
           </div>
 
           <div className={style.main__content}>
@@ -237,14 +236,13 @@ export default function Home(props) {
                 <div className={style.main__init}>
                   <DropDown inter={explain.Tipo_de_Torre} label={"Tipo de Torre"} id={i} setDrop={setDrop} />
                   <InputText inter={explain.Quantos_Andares} label={"Quantos Andares"} id={i} tipo={"number"} onInput={({ target }) => setQuantAndar(incrementaLista(quantAndar, parseInt(target.value), i))} />
-                  <DropDown inter={explain.Quantos_Apartamentos_por_Andar} label={"Quantos Apartamentos por Andar"} id={i} setDrop={setDrop} />
-                  <InputText inter={explain.Quantidade_de_torres_tipo} label={"Quantidade de torres tipo"} id={i} tipo={"number"} onInput={({ target }) => setQuantTorre(incrementaLista(quantTorre, parseInt(target.value), i))} />
+                  <DropDown inter={explain.Quantos_Apartamentos_por_Andar} label={"Apartamentos por Andar"} id={i} setDrop={setDrop} />
+                  <InputText inter={explain.Quantidade_de_torres_tipo} label={"Quantidade de torres"} id={i} tipo={"number"} onInput={({ target }) => setQuantTorre(incrementaLista(quantTorre, parseInt(target.value), i))} />
                 </div>
               )}
             </div>
 
             <div className={style.bnt__container}>
-              {/* <button className={style.bnt} onClick={apaga}>Apagar</button> */}
               <button className={style.bnt} onClick={envia}>Calcular</button>
             </div>
 

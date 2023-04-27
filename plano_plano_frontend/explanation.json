@@ -5,7 +5,7 @@
     "Metragem": "Metragem que o terreno possui",
     "Zoneamento": "Zoneamento que o terreno possui",
     "Publico": "Definição se será um terreno voltando para o Interesse Social (HIS), moradia popular (HMP) ou sem limitação de renda (R2V)",
-    "Operacao_Urbana": "Selecione se o terreno está em alguma operação urbana",
+    "tipo_fachada_ativa": "Selecione se o terreno está em alguma operação urbana",
     "Garagem": "Selecione se o empreendimento possuirá garagem ou não",
     "Numero_de_vagas": "Insira quantas vagas de carro terá na garagem",
     "Quantos_Andares_na_Garegem": "Insira quantos andares terá na gararem",
